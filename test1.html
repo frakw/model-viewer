@@ -1,5 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>&lt;model-viewer&gt;</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Easily display interactive 3D models on the web and in AR">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" href="styles/examples.css" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
+
+  <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+  <script src="node_modules/focus-visible/dist/focus-visible.js" defer></script>
+
+  <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-169901325-1', { 'storage': 'none' });
+    ga('set', 'referrer', document.referrer.split('?')[0]);
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  <style>
+    .demo model-viewer {
+      background-color: #fff;
+      --poster-color: #fff0;
+    }
+
+    model-viewer::part(default-progress-mask) {
+      display: none;
+    }
+  </style>
+</head>
+<body>
 <!-- Import the component -->
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 <!-- Use it like any other HTML element -->
 <model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="myassets/david.glb" ar ar-modes="webxr scene-viewer quick-look" environment-image="shared-assets/environments/moon_1k.hdr" poster="assets/NeilArmstrong.webp" seamless-poster shadow-intensity="1" camera-controls></model-viewer>
+</body>
+</html>

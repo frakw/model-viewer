@@ -17,7 +17,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>&lt;AR 大衛像&gt;</title>
+  <title>AR 大衛像</title>
   <meta charset="utf-8">
   <meta name="description" content="Easily display interactive 3D models on the web and in AR">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,8 +37,8 @@
   <script async src='https://www.google-analytics.com/analytics.js'></script>
   <style>
     .demo model-viewer {
-      background-color: #fff;
-      --poster-color: #fff0;
+      background-color: transparent;
+      --poster-color: transparent;
     }
 
     model-viewer::part(default-progress-mask) {
@@ -60,6 +60,7 @@
           <div id="section-quick-start">
             <h3 class="grouping-title grouping-title-new quick-start">手機可開啟AR按鈕(右下角)觀賞</h3>
             <div class="quick-start-example">
+                <example-snippet> 
                 <template>
 <!-- Import the component -->
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
@@ -67,6 +68,7 @@
 <!-- Use it like any other HTML element -->
 <model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="myassets/david.glb" ar ar-modes="webxr scene-viewer quick-look" environment-image="shared-assets/environments/moon_1k.hdr" poster="myassets/david_cover.png" seamless-poster shadow-intensity="1" camera-controls></model-viewer>
                 </template>
+            </example-snippet>
             </div>
           </div>
 
